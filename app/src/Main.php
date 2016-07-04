@@ -48,7 +48,6 @@ final class Main {
                 $plugin->initialize($environment);
             } catch (Throwable $ex) {
                 $logger->error('error loading plugin', ['plugin' => $pluginPath, 'reason' => $ex]);
-                $logger->warning('will not load plugin', ['plugin' => $pluginPath]);
             }
         }
     }
